@@ -1,0 +1,13 @@
+{
+    "name": "bonta-tools",
+    "version": "0.0.1",
+    "repository": "git@github.com:dtsaknakis/bonta-tools.git",
+    "author": "Dimitris Tsaknakis",
+    "license": "MIT",
+    "scripts": {
+        "compile": "rm -rf dist/lib && tsc && tsc --build tsconfig.es5.json"
+    },
+    "devDependencies": {
+        "typescript": "^4.8.4"
+    }
+}

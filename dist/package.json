@@ -1,0 +1,33 @@
+{
+    "name": "@dtsaknakis/bonta-tools",
+    "version": "0.0.1",
+    "description": "An example library for learning purposes. Please do not install.",
+    "main": "lib/es5/index.js",
+    "module": "lib/es6/index.js",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dtsaknakis/bonta-tools.git"
+    },
+    "files": [
+        "lib",
+        "CHANGELOG.md",
+        "LICENSE",
+        "package.json",
+        "README.md"
+    ],
+    "keywords": [
+        "javascript",
+        "learning",
+        "utilities",
+        "utils",
+        "bonta",
+        "tools"
+    ],
+    "author": "Dimitris Tsaknakis",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/dtsaknakis/bonta-tools/issues"
+    },
+    "homepage": "https://github.com/dtsaknakis/bonta-tools#readme"
+}
