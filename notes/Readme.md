@@ -1,6 +1,6 @@
 # My notes on creating this library
 
-- Last update: 2022-10-23
+- Last update: 2022-10-24
 - Sources:
   - [How to make a JavaScript library - building with TypeScript and publishing](https://youtu.be/vRmLTZyq57U)
 - Other links:
@@ -36,10 +36,17 @@
 - I created a 'package.json' inside dist/ (alongside lib/). It has
   some info, an important part of which is the 'main' for ES5 usage
   and 'module' for ES6 usage.  
+- I also added a 'README.md' file in dist/, so that it's available
+  in npm when I publish the library there.  
 - I initialized a local git repo via `git init`, created a GitHub
   repo, connected the two, added the files, commited and pushed it
   to GitHub.  
 
+Publishing to npm  
+
+- I navigated to the dist/ folder, and then I logged into my npm 
+  account via CLI `npm login` (verify with `npm whoami`).  
+- I publishe the package as a public package via `npm publish --access=public`
 
 
 
