@@ -46,8 +46,11 @@ Publishing to npm
 
 - I navigated to the dist/ folder, and then I logged into my npm 
   account via CLI `npm login` (verify with `npm whoami`).  
-- I publishe the package as a public package via `npm publish --access=public`
+- I published the package as a public package via `npm publish --access=public`  
+  This is its link in npm: [https://www.npmjs.com/package/@dtsaknakis/bonta-tools](https://www.npmjs.com/package/@dtsaknakis/bonta-tools)
 
+Using the library
 
+- To Do
 
 
