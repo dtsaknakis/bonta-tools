@@ -9,6 +9,37 @@
 
 ---
 
+## Initial project setup
+
+I created this project's directory (the top-level project directory) 
+which for this project I named 'bonta-tools' (because the library idea 
+is supposed to be mainly some helper functions in order to assist 
+with botulinum toxin relevant info (units per product vial, units in 
+specific sized syringes after dilution, etc).
+I also added a [\.gitignore](../.gitignore) file for any files that are 
+not to be included in the GitHub project of the library.
+
+I created a [src](../src) directory, where all the source code of the 
+development process is. In it I created an [index.ts](../src/index.ts) 
+file which is initially empty.  
+
+In [src](../src) I created:
+
+- a [data](../src/data) directory with a 
+  [products.ts](../src/data/products.ts) file in it, which exports a 
+'products' object with some BoNT-A brands info. So far I'm not using 
+  it for something.
+- a [units](../src/units) directory with a [to_units](../src/units/to_units.ts) 
+  file in it. In it a 'to_units()' function is created...
+
+
+<br><br>
+
+**CURRENTLY HERE**
+
+<br><br>
+
+
 - Created the top-level project folder (named bonta-tools), navigated
   in it.
 - Created README.md, the notes folder with this Readme.md, added
