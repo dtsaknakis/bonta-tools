@@ -188,6 +188,6 @@ of importing via ES5's `require`).
 
 <br><br>
 
-**CURRENTLY HERE**
+Currently on video minute 14:40
 
 
