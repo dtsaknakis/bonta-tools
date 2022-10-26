@@ -1,6 +1,4 @@
 node_modules
-
-#dist/lib
-
+dist/lib
 .DS_Store
 

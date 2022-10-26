@@ -1,6 +1,6 @@
 {
     "name": "@dtsaknakis/bonta-tools",
-    "version": "0.0.2",
+    "version": "0.0.1",
     "description": "An example library for learning purposes. Please do not install.",
     "main": "lib/es5/index.js",
     "module": "lib/es6/index.js",
@@ -18,11 +18,16 @@
     ],
     "keywords": [
         "javascript",
-        "learning",
-        "utilities",
-        "utils",
+        "typescript",
+        "botulinum toxin",
         "bonta",
-        "tools"
+        "botox",
+        "dysport",
+        "bocouture",
+        "utilities",
+        "tools",
+        "dermatology",
+        "medical"
     ],
     "author": "Dimitris Tsaknakis",
     "license": "MIT",

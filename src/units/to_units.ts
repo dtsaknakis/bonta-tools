@@ -7,7 +7,7 @@
 
 
 /** Accepts a BoNTA brand name string, returns its units per vial */
-export const to_units = (brand_name="botox") => {
+export const to_units = (brand_name: string = "botox"): number => {
     // Sanitize user's input
     const brand = brand_name.trim().toLowerCase();
 

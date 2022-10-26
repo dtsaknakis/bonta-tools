@@ -5,14 +5,9 @@
     "author": "Dimitris Tsaknakis",
     "license": "MIT",
     "scripts": {
-        "compile": "rm -rf dist/lib && tsc && tsc --build tsconfig.es5.json",
-        "parcel": "parcel index.html"
+        "compile": "rm -rf dist/lib && tsc && tsc --build tsconfig.es5.json"
     },
     "devDependencies": {
         "typescript": "^4.8.4"
-    },
-    "dependencies": {
-        "@dtsaknakis/bonta-tools": "^0.0.2",
-        "parcel": "^2.7.0"
     }
 }

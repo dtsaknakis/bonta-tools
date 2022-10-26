@@ -1,12 +1,12 @@
 "use strict";
+// Some dummy data on bonta brand names and their units per vial
+//const bonta_data = {
+//    botox: 100,
+//    dysport: 500,
+//    bocouture: 50,
+//};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.to_units = void 0;
-// Some dummy data on bonta brand names and their units per vial
-var bonta_data = {
-    botox: 100,
-    dysport: 500,
-    bocouture: 50,
-};
 /** Accepts a BoNTA brand name string, returns its units per vial */
 var to_units = function (brand_name) {
     if (brand_name === void 0) { brand_name = "botox"; }
