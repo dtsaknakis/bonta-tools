@@ -36,3 +36,19 @@ via `import` (ES6) or `require` (ES5), pass it one of the "botox",
 or "dysport", or "bocouture" brands, and get its Units per 
 vial returned as an integer.  
 
+Example using `require`:
+
+```ts
+const { to_units } = require("@dtsaknakis/bonta-tools");
+
+console.log(to_units("botox")); // 100
+```
+
+Example using `import`:
+
+```ts
+import { to_units } from "@dtsaknakis/bonta-tools";
+
+console.log(to_units("dysport")); // 500
+```
+

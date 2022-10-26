@@ -1,11 +1,8 @@
 # My notes on creating this library
 
-- Last update: 2022-10-24
+- Last update: 2022-10-26
 - Sources:
   - [How to make a JavaScript library - building with TypeScript and publishing](https://youtu.be/vRmLTZyq57U)
-- Other links:
-  - [Handling multiple GitHub accounts on macOS](https://gist.github.com/Jonalogy/54091c98946cfe4f8cdab2bea79430f9)
-  - [YouTube, How to manage multiple GitHub accounts on a single machine with SSH keys](https://www.youtube.com/watch?v=J63meQ83yyI)
 
 ---
 
@@ -180,12 +177,17 @@ npm publish command.
 
 ## Using the library as a consumer
 
-
+In order to demonnstrate usage of the library I created a directory 
+named [consumer-examples](../consumer-examples/). In it I have a 
+'package.json' file (created via `npm init` from inside that folder), 
+which also installs TypeScript (via `npm i -D typescript`) and [Parcel](https://parceljs.org/) 
+(via `npm i -D parcel`), and has a "start" script using Parcel on an 
+'index.html' file (which I also create in order to demonstrate usage 
+of importing via ES5's `require`).  
 
 
 <br><br>
 
 **CURRENTLY HERE**
 
-<br><br>
 
