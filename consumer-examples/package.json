@@ -2,13 +2,14 @@
   "name": "consumer-examples",
   "version": "1.0.0",
   "description": "",
-  "main": "",
+  "main": "client.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html --open"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@dtsaknakis/bonta-tools": "^0.0.6",
     "parcel": "^2.7.0",
     "typescript": "^4.8.4"
   }

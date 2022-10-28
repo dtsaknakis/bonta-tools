@@ -20,7 +20,8 @@ file and the README.md file - see below when I compile the dist folder).
 
 I created a [src](../src) directory, where all the source code of the 
 development process is. In it I created an [index.ts](../src/index.ts) 
-file which is initially empty.  
+file which is initially empty but will export the functionality that I 
+want the end user/cosumer to have available.  
 
 ### The library code
 
@@ -29,7 +30,8 @@ In [src](../src) I created:
 - a [data](../src/data) directory with a 
   [products.ts](../src/data/products.ts) file in it, which exports a 
 'products' object with some BoNT-A brands info. (*So far I'm not using 
-  it for something, but in time it may serve its purpose*).
+  it for something and I don't know why I created it just yet, but in 
+  time it may serve its purpose*).
 - a [units](../src/units) directory with a [to_units](../src/units/to_units.ts) 
   file in it. In it a 'to_units()' function is created and `export`ed; the function 
   accepts a BoNT-A product name string, and it returns its units per 
@@ -182,15 +184,62 @@ npm publish command.
 
 In order to demonnstrate usage of the library I created a directory 
 named [consumer-examples](../consumer-examples/). In it I have a 
-'package.json' file (created via `npm init` from inside that folder), 
-which also installs TypeScript (via `npm i -D typescript`) and [Parcel](https://parceljs.org/) 
-(via `npm i -D parcel`), and has a "start" script using Parcel on an 
-'index.html' file (which I also create in order to demonstrate usage 
-of importing via ES5's `require`).  
+'package.json' file (created via `npm init` from inside that folder).  
+I installed TypeScript (via `npm i -D typescript`) and [Parcel](https://parceljs.org/) 
+(via `npm i -D parcel`), and of course my new npm library (via `npm i -D @dtsaknakis/bonta-tools`).  
 
+### Testing CommonJS server-side via `node` command
+
+I created a file named '[server.js](../consumer-examples/server.js)'. In 
+it I get the functions via `require` and use them in order to calculate 
+the total units of a Dysport vial and the units of a 2.5mL diluted Botox 
+inside a 0.5mL syringe:
+
+```js
+const { to_units, units_per_syringe } = require("@dtsaknakis/bonta-tools");
+
+const dysport_units = to_units("  Dysport   ");
+console.log(`Dysport has ${dysport_units} Units per vial.`);
+
+const botox_in_syringe = units_per_syringe("botox", 2.5, 0.5);
+console.log(`A 0.5mL syringe with Botox diluted with 2.5mL has ${botox_in_syringe} Units.`);
+```
+
+### Testing the ES6 lib version client-side via Parcel
+
+I created a [consumer-examples/index.html](../consumer-examples/index.html) 
+file pointing to a [consumer-examples/client.js](../consumer-examples/client.js) 
+file.  
+Inside the [consumer-examples/package.json](../consumer-examples/package.json) 
+I created a "start" script using Parcel on the 'index.html' file, also 
+using Parcel's `--open` flag to automatically open the browser for me.  
+
+In [client.js](../consumer-examples/client.js) I use `import` to get the 
+library functions, and test it the same way I did above:
+
+```js
+import { to_units, units_per_syringe } from "@dtsaknakis/bonta-tools";
+
+const dysport_units = to_units("  Dysport   ");
+const phrase1 = `Dysport has ${dysport_units} Units per vial.`;
+console.log(phrase1);
+
+const botox_in_syringe = units_per_syringe("botox", 2.5, 0.5);
+const phrase2 = `A 0.5mL syringe with Botox diluted with 2.5mL has ${botox_in_syringe} Units.`;
+console.log(phrase2);
+
+// Add data received to HTML elements
+const out1 = document.getElementById("output-1");
+const out2 = document.getElementById("output-2");
+out1.innerText = phrase1;
+out2.textContent = phrase2;
+```
+
+Then in order to see it in action, I ran the "start" script (`npm start`), 
+opened [http://localhost:1234](http://localhost:1234), and opened the 
+browser's dev tools to see the console output with the prints.  
+
+The library works, both in CommonJS and in ES6 modules versions!  
 
 <br><br>
-
-Currently on video minute 14:40
-
 
