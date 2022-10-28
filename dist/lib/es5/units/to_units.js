@@ -6,7 +6,7 @@
 //    bocouture: 50,
 //};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.to_units = void 0;
+exports.units_per_syringe = exports.to_units = void 0;
 /** Accepts a BoNTA brand name string, returns its units per vial */
 var to_units = function (brand_name) {
     if (brand_name === void 0) { brand_name = "botox"; }
@@ -26,3 +26,12 @@ var to_units = function (brand_name) {
     }
 };
 exports.to_units = to_units;
+/** Calculates total bont-a units inside a syringe, given a brand name and the product dilutioon. */
+var units_per_syringe = function (brand_name, dilution, syringe_size) {
+    if (brand_name === void 0) { brand_name = "botox"; }
+    if (dilution === void 0) { dilution = 2.5; }
+    if (syringe_size === void 0) { syringe_size = 0.5; }
+    var brand_units = (0, exports.to_units)(brand_name); // get the brand's units per vial
+    return (syringe_size * brand_units) / dilution;
+};
+exports.units_per_syringe = units_per_syringe;

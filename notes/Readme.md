@@ -1,6 +1,6 @@
 # My notes on creating this library
 
-- Last update: 2022-10-26
+- Last update: 2022-10-28
 - Sources:
   - [How to make a JavaScript library - building with TypeScript and publishing](https://youtu.be/vRmLTZyq57U)
 
@@ -34,6 +34,9 @@ In [src](../src) I created:
   file in it. In it a 'to_units()' function is created and `export`ed; the function 
   accepts a BoNT-A product name string, and it returns its units per 
   vial if it's one of three products, otherwise it returns 0.  
+  A second function named 'units_per_syringe' is created, which returns 
+  the total units of a specific product with a given dilution inside a given 
+  size syringe.
 
 ### Exporting the library's functionality we want to the consumer
 

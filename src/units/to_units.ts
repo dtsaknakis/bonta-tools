@@ -25,3 +25,10 @@ export const to_units = (brand_name: string = "botox"): number => {
     }
 };
 
+
+/** Calculates total bont-a units inside a syringe, given a brand name and the product dilutioon. */
+export const units_per_syringe = (brand_name: string = "botox", dilution: number = 2.5, syringe_size: number = 0.5) => {
+    const brand_units = to_units(brand_name); // get the brand's units per vial
+    return (syringe_size * brand_units) / dilution;
+};
+
