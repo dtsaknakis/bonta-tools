@@ -1,6 +1,6 @@
 {
     "name": "@dtsaknakis/bonta-tools",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "An example library for learning purposes. Please do not install.",
     "main": "lib/es5/index.js",
     "module": "lib/es6/index.js",
